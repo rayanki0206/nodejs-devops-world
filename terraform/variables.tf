@@ -27,3 +27,15 @@ variable "eks_cluster_version" {
     type        = string
     default     = "1.35"
 }
+
+variable "ecr_repo_name" {
+  description = "The name of the ECR Repository"
+  type = string
+  default = "demo-ecr-repo"
+}
+
+variable "ecr_image_tag_mutability" {
+  description = "The image tag mutability setting for the ECR Repository (MUTABLE or IMMUTABLE)"
+  type = string
+  default = "MUTABLE"
+}
