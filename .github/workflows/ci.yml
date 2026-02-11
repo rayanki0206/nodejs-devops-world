@@ -7,6 +7,7 @@ on:
   push:
     branches-ignore:
       - main
+      - k8s-vignesh
 
 jobs:
   terraform-plan:
