@@ -1,0 +1,19 @@
+# Terraform specific files
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+
+# Node.js specific files
+node_modules/
+npm-debug.log
+.env
+
+# MacOS specific files
+.DS_Store
+
+# Sensitive AWS credentials (if any are saved locally)
+.aws/
