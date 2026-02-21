@@ -25,12 +25,18 @@ module "eks" {
       }
     }
 
-  eks_managed_node_groups = {
+eks_managed_node_groups = {
     default = {
       instance_types = ["t3.micro"]
-      desired_size   = 2
-      min_size       = 1
-      max_size       = 3
+      desired_size   = 3
+      min_size       = 2
+      max_size       = 5
+
+      metadata_options = {
+        http_endpoint               = "enabled"
+        http_tokens                 = "required"
+        http_put_response_hop_limit = 2
+      }
     }
   }
 }
