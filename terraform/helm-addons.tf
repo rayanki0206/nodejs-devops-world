@@ -37,7 +37,6 @@ resource "helm_release" "aws_lb_controller" {
   ]
 }
 
-
 resource "helm_release" "cluster_autoscaler" {
   name       = "cluster-autoscaler"
   repository = "https://kubernetes.github.io/autoscaler"
